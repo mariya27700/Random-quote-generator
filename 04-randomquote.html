@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            background-color: #eeccef;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #ff7a5c;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ffb6b9;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff7a5c;
+        }
+
+        .quote {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: 500;
+            color: #444;
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+            background-color: #fff4f4;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Quote Generator</h1>
+    <button onclick="quoteGenerator();">Click me to generate random quotes</button>
+    <div class="quote"></div>
+
+    <script>
+        function quoteGenerator(){
+            const quotes = [
+                "Choose joy.",
+                "You’ve got this.",
+                "Good things take time.",
+                "Be the light.",
+                "Start where you are.",
+                "Keep going.",
+                "Shine on.",
+                "Believe in yourself."
+            ];
+            let randomIndex = Math.floor(Math.random() * quotes.length);
+            document.querySelector(".quote").innerHTML = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
